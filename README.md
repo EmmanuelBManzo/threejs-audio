@@ -1,8 +1,10 @@
 # Visualizador de audio Interactivo
 
 El presente proyecto desarrollado con ayuda de three.js tiene como objetivo poder visualizar la diferencia entre las frecuencias de audio de distintas canciones a través del análisis de audio y la manipulación de atributos como geometría, luces, sombras y colores, temas vistos en la materia de Computación Visual Interactiva. 
+![Screenshot_19](https://user-images.githubusercontent.com/111076222/205846240-0e0f8023-7009-434c-b907-dc54ff2dcc1b.png)
 
-Una demostración del proyecto puede ser encontrada en el siguiente enlace: Visualizador de Audio - CVI
+
+Una demostración del proyecto puede ser encontrada en el siguiente enlace: [Visualizador de Audio - CVI](https://emmanuelbmanzo.github.io/threejs-audio/)
 ---
 
 ## Desarrollo
@@ -24,13 +26,16 @@ Para la visualización del audio se eligió representar cada canción con un "au
 Para representar los cambios en las frecuencias de audio se crearon figuras con geometría de caja posicionadas una al lado de la otra, lo que facilita la visualización secuencial de cada onda. A cada una de estas cajas se le modificaría la posición y color conforme el analizador de audio cambie de valores, lo que permite visualizar claramente la diferencia entre ambas canciones.
 
 
+![Screenshot_21](https://user-images.githubusercontent.com/111076222/205846401-561d3b16-fb1b-4c5e-bfcb-4193b69c662e.png)
 
 
 ### AudioAnalyser
 El componente principal del proyecto que permite "escuchar" en tiempo real un archivo de audio y tenerlo disponible en forma de un arreglo de 256 posiciones, cada una representando un nodo de frecuencia de audio.
 
+![Screenshot_20](https://user-images.githubusercontent.com/111076222/205846436-7d3ab544-d8f3-4489-b2b8-aa3e237c3ef7.png)
 
 Una vez que se carga y reproduce el audio con la función loadAudio(), es posible obtener los valores del analyser por cada frame de la función render. Así pues, estas frecuencias que son valores de 0 a 256 se convierten a una representación decimal del rango 0-1 con los que sea sencillo manipular los objetos de la escena. El fragmento de código a continuación es un ejemplo de la manera en que se utilizaron los valores del analyser.
+
 ´´´
 if(isSong1Active){
    analyser1.getFrequencyData();
@@ -40,5 +45,6 @@ if(isSong1Active){
       }
 }
 ´´´
+
 ## Código fuente
 Un enlace al código fuente desarrollado puede ser encontrado aquí
